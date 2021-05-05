@@ -6,7 +6,6 @@
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#pre-requisitos">Pré-requisitos</a> • 
  <a href="#iniciar-projeto">Iniciar Projeto</a> • 
- <a href="#autor">Autor</a>
 </p>
 
 ### 🚀 Objetivo 
