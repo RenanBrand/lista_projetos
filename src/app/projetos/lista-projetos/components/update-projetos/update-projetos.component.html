@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <br>
+<form [formGroup]="form" novalidate>
+  <div class="form-group">
+    <label for="exampleDesc">Descrição</label>
+    <input type="text" class="form-control" id="exampleDesc" 
+    placeholder="Digite a descrição do projeto" formControlName="descricao">
+  </div>
+  <div class="form-group">
+    <label for="exampleViabilidade">Viabilidade</label>
+    <select class="form-control" id="viabilidade" formControlName="viabilidade">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+ <div class="form-group">
+    <label for="situacao">Situação</label>
+    <select class="form-control" id="situacao" formControlName="situacao">
+      <option *ngFor="let status of situacao">
+      {{status}}
+      </option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary"(click)="atualizar()">
+    Atualizar Projeto
+  </button>
+</form>
+<br><br>
+</div>

@@ -1,0 +1,73 @@
+<div class="modal fade rounded" id="cadastro" tabindex="-1" role="dialog" 
+aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"id="myLargeModalLabel">Cadastro de Projetos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="flex-row">
+        <form [formGroup]="f" novalidate>
+          <div class="form-group">
+            <label for="exampleDesc">Descrição</label>
+            <input type="text" class="form-control" id="exampleDesc" 
+            placeholder="Digite a descrição do projeto" formControlName="descricao">
+          </div>
+          <div class="form-group">
+            <label for="exampleViabilidade">Viabilidade</label>
+            <select class="form-control" id="viabilidade" formControlName="viabilidade">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleData1">Data de inicio previsto:</label>
+            <input type="text" class="form-control" id="exampleData1" 
+            formControlName="dataInicio" mask="d0/M0/0000" 
+            [leadZeroDateTime]="true">
+          </div>
+          <div class="form-group">
+            <label for="exampleData2">Data fim previsto</label>
+            <input type="text" class="form-control" id="exampleData2" 
+            formControlName="dataFim" mask="d0/M0/0000" 
+            [leadZeroDateTime]="true">
+          </div>
+         <div class="form-group">
+            <label for="situacao">Situação</label>
+            <select class="form-control" id="situacao" formControlName="situacao">
+              <option *ngFor="let status of situacao">
+                {{ status }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="valorExecucao">Valor da Execução</label>
+            <input type="text" class="form-control" id="valorExecucao" 
+            placeholder="R$"formControlName="valorDaExecucao" prefix="R$" 
+            mask="separator.2" thousandSeparator=".">
+          </div>
+          <div class="form-group">
+            <label for="nomeDoResponsavel">Nome do Responsavel</label>
+            <input type="text" class="form-control" id="nomeDoResponsavel" 
+            placeholder="Digite o nome do Responsavel" formControlName="nomeDoResponsavel">
+          </div>
+          <button type="submit" class="btn btn-primary"
+        (click)="cadastrarProjetos()">Criar Projeto</button>
+        </form>
+      </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
