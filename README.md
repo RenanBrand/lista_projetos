@@ -2,7 +2,7 @@
     <a>Lista de Projetos</a>
 </h1>
 <p align="center">
- <a href="#objetivo">Objetivo</a> • • 
+ <a href="#objetivo">Objetivo</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#pre-requisitos">Pré-requisitos</a> • 
  <a href="#iniciar-projeto">Iniciar Projeto</a> • 
@@ -19,7 +19,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Bootstrap](https://getbootstrap.com)
 - [Node.js](https://nodejs.org/en/)
 - [Angular](https://angular.io)
-- [JQuery](https://jquery.com)
+- [jQuery](https://jquery.com)
 - [TypeScript](https://www.typescriptlang.org/)
 
 
